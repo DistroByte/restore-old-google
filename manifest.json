@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Restore Old Google Search",
+  "version": "1.0",
+
+  "description": "Automatically applies the 'Web' filter to remove generated content from your search results",
+
+  "permissions": [
+    "*://*.google.com/search*",
+    "webRequest"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/search*"],
+      "js": ["webfilter.js"]
+    }
+  ]
+}
+
